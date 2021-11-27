@@ -7,7 +7,6 @@
 #include <QMainWindow>
 #include <QPushButton>
 #include <QtGlobal>
-#include <QTime>
 #include <QDialog>
 #include <QTcpSocket>
 
@@ -21,7 +20,6 @@ class RegisterWindow : public QMainWindow
 public:
     explicit RegisterWindow(QWidget *parent = nullptr);
     ~RegisterWindow();
-    QString GenerateVarification();     // 生成随机验证码1000~9999
     void FeedbackMessage(QString msg);  // 展示各种反馈信息
 
 private slots:

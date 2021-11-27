@@ -29,8 +29,6 @@ void Connection::readMsg() {
     //将接收到的数据存放到变量中
     QStringList data = msg.split('&');
 
-
-
     if (data[0] == "U") { // 用户模块
         if (data[1] == "L") { // 登录
             emit Connection::ULsignal(data[2]);

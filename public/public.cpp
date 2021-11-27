@@ -1,13 +1,6 @@
 #include "public.h"
 using namespace std;
 
-////配置tcp连接的端口以及ip地址
-//int port = 6080;
-//QString hostname = "127.0.0.1";
-
-////初始化tcp客户端连接
-//QTcpSocket *client = new QTcpSocket();
-
 //游戏内变量初始化
 int red_num = 0;
 int blue_num = 0;
@@ -26,33 +19,6 @@ int Turny = 0;
 
 QVector<QPoint> MovePoint;
 QPoint TurnPoint;
-//连接服务器端
-//void ConnectServer()
-//{
-//    client->abort();
-//    client->connectToHost("127.0.0.1",6080);
-//}
-
-////发送消息
-//void sendMes(QString str)
-//{
-//    QByteArray block; //用于暂存我们要发送的数据
-
-//    block = str.toUtf8();
-
-//    client->flush();
-//    client->write(block);
-//}
-
-////接受消息
-//QString readMes()
-//{
-//    QString message;
-//    message = client->readAll();
-//    //将接收到的数据存放到变量中
-//    client->flush();
-//    return message;
-//}
 
 
 int GetChessTypeNum(CHESS_TYPE type)

@@ -5,8 +5,16 @@
 #include<QVector>
 #include<QPoint>
 
-
-
+/*
+ * TODO(@li, @ye, @yang, @yin):
+ * 登录成功后，服务器应该返回那些量，UID，昵称，积分，好友，头像？
+ * 定义全局静态变量来保存，以供后续其他模块使用
+ * @example:
+ *   static int s_UID;
+ *   static int s_scores;
+ *   static QString s_friends;
+ *   static ... 头像怎么存在本地，用啥类型？
+ */
 
 //棋盘的变量
 

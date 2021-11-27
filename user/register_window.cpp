@@ -32,12 +32,6 @@ RegisterWindow::~RegisterWindow()
     delete ui;
 }
 
-QString RegisterWindow::GenerateVarification()
-{
-    qsrand(QTime(0,0,0).secsTo(QTime::currentTime()));
-    return QString::number(qrand() % 9000 + 1000);
-}
-
 void RegisterWindow::FeedbackMessage(QString msg)
 {
     qDebug() << msg;
@@ -49,7 +43,7 @@ void RegisterWindow::SendVerify()
     QString mail_address = ui->lineEdit_mail->text();
 
     //存放在本地的验证码
-    _verification_code = GenerateVarification();
+    _verification_code = Smtp::GenerateVarification();
 
     //第一个参数是发送者邮箱，第二个授权码，并不是邮箱密码
     Smtp smtp("2387355088@qq.com","qizabxcdsxfldihi");

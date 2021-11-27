@@ -4,6 +4,7 @@
 #include<QByteArray>
 #include<QString>
 #include<QTcpSocket>
+#include<QTime>
 
 class Smtp
 {
@@ -11,6 +12,8 @@ public:
     Smtp(QByteArray username,QByteArray password);
     ~Smtp();
     void send(QByteArray recvaddr,QString subject,QString content);
+    static QString GenerateVarification();     // 生成随机验证码1000~9999
+
 private:
     QTcpSocket * clientsocket;
     QByteArray username;

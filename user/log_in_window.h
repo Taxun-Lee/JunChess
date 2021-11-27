@@ -3,8 +3,8 @@
 
 #include "forget_window.h"
 #include "register_window.h"
-
 #include "room/dating.h"
+#include "public/connection.h"
 
 #include <QMainWindow>
 #include <QPushButton>
@@ -22,6 +22,9 @@ public:
     ~LogInWindow();
 
     void show();
+
+public slots:
+    void readMsg(QString);
 
 signals:
     void GameShow();
